@@ -16,6 +16,7 @@ public class ProyectilDestruyeEnemigos : MonoBehaviour
             {
                 Destroy(collision.gameObject); // Destruye al enemigo
                 Destroy(gameObject);           // Destruye al proyectil
+                VictoryManager.Instance.SumarVictoria();
                 break;
             }
         }
