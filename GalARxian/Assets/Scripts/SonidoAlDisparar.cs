@@ -4,6 +4,7 @@ using UnityEngine;
 public class SonidoAlDisparar : MonoBehaviour
 {
     public AudioClip sonidoDisparo;
+    public float speed = 10f;
 
     void Start()
     {
@@ -13,5 +14,9 @@ public class SonidoAlDisparar : MonoBehaviour
         {
             audioSource.PlayOneShot(sonidoDisparo);
         }
+    }
+    void Update()
+    {
+        transform.position += Vector3.up * speed * Time.deltaTime;
     }
 }
